@@ -211,7 +211,7 @@ Update.prototype.update = function() {
   }
   this.button.innerHTML = format(cost);
   this.button.disabled = cost > this.city.currency;
-  this.label.innerHTML = message.replace('CITY', '<b>' + this.city.name + '</b>');
+  this.label.innerHTML = message.replace(/CITY/g, '<b>' + this.city.name + '</b>');
 };
 
 var City = function(data) {
